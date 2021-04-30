@@ -12,14 +12,14 @@
               "description": "Credit Card Number (Unique)"
           },
           {
-              "name": "num_trans_last_1d",
+              "name": "num_trans_last_7d",
               "type": "bigint",
-              "description": "Aggregated Metric: Average number of transactions for the card aggregated by past 1 day"
+              "description": "Aggregated Metric: Average number of transactions for the card aggregated by past 7 days"
           },
           {
-              "name": "avg_amt_last_1d",
+              "name": "avg_amt_last_7d",
               "type": "double",
-              "description": "Aggregated Metric: Average transaction amount for the card aggregated by past 1 day"
+              "description": "Aggregated Metric: Average transaction amount for the card aggregated by past 7 days"
           },
           {
               "name": "event_time",
