@@ -29,17 +29,12 @@
           {
               "name": "event_time",
               "type": "string",
-              "description": "Externally generated event timestamp (displayable string)"
-          },
-          {
-              "name": "trans_time",
-              "type": "double",
-              "description": "Required feature for event timestamp (type double)"
+              "description": "Externally generated event timestamp (String in ISO-8601 format)"
           }
       ],
     
       "record_identifier_feature_name": "consumer_id",
-      "event_time_feature_name": "trans_time",
+      "event_time_feature_name": "event_time",
       "tags": [{"Key": "Environment", "Value" : "DEV"}, 
                {"Key": "IngestionType", "Value": "Batch"},
                {"Key": "CostCenter", "Value": "C18"}]
