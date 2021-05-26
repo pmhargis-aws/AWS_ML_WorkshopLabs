@@ -1,20 +1,10 @@
 {
-    "description": "Aggregated features for each credit card, streamed intraday",
+    "description": "Credit card features",
     "features": [
-          {
-              "name": "tid",
-              "type": "string",
-              "description": "Transaction ID (Unique)"
-          },
           {
               "name": "cc_num",
               "type": "bigint",
               "description": "Credit Card Number (Unique)"
-          },
-          {
-              "name": "consumer_id",
-              "type": "string",
-              "description": "Consumer ID built from BBAN proxy (Unique)"
           },
           {
               "name": "num_trans_last_7d",
@@ -27,13 +17,23 @@
               "description": "Aggregated Metric: Average transaction amount for the card aggregated by past 7 days"
           },
           {
+              "name": "num_trans_last_1d",
+              "type": "bigint",
+              "description": "Aggregated Metric: Average number of transactions for the card aggregated by past 7 days"
+          },
+          {
+              "name": "avg_amt_last_1d",
+              "type": "double",
+              "description": "Aggregated Metric: Average transaction amount for the card aggregated by past 7 days"
+          },
+          {
               "name": "event_time",
               "type": "string",
               "description": "Externally generated event timestamp (String in ISO-8601 format)"
           }
       ],
     
-      "record_identifier_feature_name": "consumer_id",
+      "record_identifier_feature_name": "cc_num",
       "event_time_feature_name": "event_time",
       "tags": [{"Key": "Environment", "Value" : "DEV"}, 
                {"Key": "IngestionType", "Value": "Batch"},

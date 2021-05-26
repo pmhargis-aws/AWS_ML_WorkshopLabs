@@ -1,0 +1,41 @@
+{
+    "description": "Consumer features",
+    "features": [
+          {
+              "name": "consumer_id",
+              "type": "string",
+              "description": "Consumer ID built from BBAN proxy (Unique)"
+          },
+          {
+              "name": "num_trans_last_7d",
+              "type": "bigint",
+              "description": "Aggregated Metric: Average number of transactions for the consumer aggregated by past 7 days"
+          },
+          {
+              "name": "avg_amt_last_7d",
+              "type": "double",
+              "description": "Aggregated Metric: Average transaction amount for the consumer aggregated by past 7 days"
+          },
+          {
+              "name": "num_trans_last_1d",
+              "type": "bigint",
+              "description": "Aggregated Metric: Average number of transactions for the consumer aggregated by past 1 day"
+          },
+          {
+              "name": "avg_amt_last_1d",
+              "type": "double",
+              "description": "Aggregated Metric: Average transaction amount for the consumer aggregated by past 1 day"
+          },
+          {
+              "name": "event_time",
+              "type": "string",
+              "description": "Externally generated event timestamp (String in ISO-8601 format)"
+          }
+      ],
+    
+      "record_identifier_feature_name": "consumer_id",
+      "event_time_feature_name": "event_time",
+      "tags": [{"Key": "Environment", "Value" : "DEV"}, 
+               {"Key": "IngestionType", "Value": "Batch"},
+               {"Key": "CostCenter", "Value": "C18"}]
+}
